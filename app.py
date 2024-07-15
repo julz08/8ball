@@ -30,7 +30,7 @@ def gifs():
         "https://media.tenor.com/c9VN1l4Kl7EAAAAM/zb1-zhang-hao.gif",
         "https://media.tenor.com/ejjMTBbVsgwAAAAM/ricky-zb1.gif"
         ]
-    return render_template('gifs.html', gif=random.choice(myGifs))
+    return render_template('gifs.html', random=random.choice(myGifs), randomBool=False, myGifs=myGifs)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)

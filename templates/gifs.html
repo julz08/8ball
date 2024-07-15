@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="../static/styles/style.css"
 </head>
 <body>
-    <img src="{{gif}}" width="500px">
+    {% if randomBool == True %}
+        <img src="{{random}}" width="500px">
+    {% else %}
+        <h1>Sorry, no gifs found.</h1>
+    {% endif %}
+    {% for gif in myGifs %}
+        <img src='{{gif}}'>
+    {% endfor %}
 </body>
 </html>
