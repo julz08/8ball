@@ -4,7 +4,7 @@ import random
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/eightball', methods=['GET', 'POST'])
 def eightball():
     return render_template('8ball.html')
 
@@ -20,6 +20,17 @@ def answer():
               "https://www.comptia.org/images/default-source/Pioneer-Article-Images/8-ball-signs-point-to-yes.png"
               ]
     return render_template('answer.html', answerImg=random.choice(answer))
+
+@app.route('/gifs')
+def gifs():
+    myGifs = [
+        "https://media.tenor.com/_YtZdkhPY-AAAAAM/cadeyup.gif",
+        "https://media1.tenor.com/m/zC_7Z4G5DYQAAAAd/bluespringjune-txt.gif",
+        "https://media1.tenor.com/m/aOA3lIif4wsAAAAd/txt-soobin.gif",
+        "https://media.tenor.com/c9VN1l4Kl7EAAAAM/zb1-zhang-hao.gif",
+        "https://media.tenor.com/ejjMTBbVsgwAAAAM/ricky-zb1.gif"
+        ]
+    return render_template('gifs.html', gif=random.choice(myGifs))
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
