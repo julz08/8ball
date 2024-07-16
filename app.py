@@ -68,7 +68,6 @@ def input():
     }
     if request.method == 'POST':
         query = request.form['query']
-        print("yyoyoyoyo")
         if query in imgData.keys():
             return render_template('input.html', url=url_for('input'), imgData=imgData[query])
         else:
