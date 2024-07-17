@@ -17,8 +17,9 @@ def answer():
               "https://preview.free3d.com/img/2022/12/3190256732718761805/ud2n6cdj.jpg",
               "https://ih1.redbubble.net/image.2135427937.4557/ur,pin_large_front,square,600x600.jpg",
               "https://ih1.redbubble.net/image.886839728.2816/st,small,507x507-pad,600x600,f8f8f8.jpg",
-              "https://www.comptia.org/images/default-source/Pioneer-Article-Images/8-ball-signs-point-to-yes.png"
-              ]
+              "https://www.comptia.org/images/default-source/Pioneer-Article-Images/8-ball-signs-point-to-yes.png",
+              "https://m.media-amazon.com/images/I/613cy0p+yhL.png",
+              "https://realtalk4everyone.com/wp-content/uploads/2017/11/image1.jpg?w=1568"]
     return render_template('answer.html', answerImg=random.choice(answer))
 
 
